@@ -12,6 +12,7 @@
     <p><?= $data['data']->objetives ?></p>
     <h4>¿Qué es necesario conocer?</h4>
     <p><?= $data['data']->necesites ?></p>
+    <a href="<?= ROOT ?>courses" class="btn btn-success <?= (isset($data['active']) && $data['active']=='courses') ? 'active' : '' ?>">Volver al listado de cursos</a>
 <?php elseif ($data['data']->type == 2): ?>
     <h4>Autor:</h4>
     <p><?= $data['data']->author ?></p>
@@ -21,6 +22,7 @@
     <p><?= $data['data']->pages ?></p>
     <h4>Resumen:</h4>
     <?= html_entity_decode($data['data']->description) ?>
+    <a href="<?= ROOT ?>books" class="btn btn-success <?= (isset($data['active']) && $data['active']=='books') ? 'active' : '' ?>">Volver al listado de libros</a>
 <?php endif; ?>
 <a href="<?= ROOT . (!empty($data['back']) ? $data['back'] : 'shop') ?>" class="btn btn-success">Volver al listado de productos</a>
 <a href="<?= ROOT ?>cart/addproduct/<?= $data['data']->id ?>/<?= $data['user_id'] ?>" class="btn btn-primary">Comprar</a>
