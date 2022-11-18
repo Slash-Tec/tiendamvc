@@ -77,6 +77,28 @@
                 </li>
             </ul>
         <?php endif; ?>
+        <?php if(isset($data['']) && $data['']): ?>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                        <a href="<?= ROOT ?>courses" class="nav-link <?= (isset($data['active']) && $data['active']=='courses') ? 'active' : '' ?>">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= ROOT ?>books" class="nav-link <?= (isset($data['active']) && $data['active']=='books') ? 'active' : '' ?>">Libros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= ROOT ?>shop/whoami" class="nav-link <?= (isset($data['active']) && $data['active']=='whoami') ? 'active' : '' ?>">Quienes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= ROOT ?>shop/contact" class="nav-link <?= (isset($data['active']) && $data['active']=='contact') ? 'active' : '' ?>">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= ROOT ?>login" class="nav-link">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                       <a href="<?= ROOT ?>login/registro" class="btn btn-info">Registrarse</a>
+                    </li>
+            </ul>
+        <?php endif; ?>
     </div>
 </nav>
 <div class="container-fluid">
