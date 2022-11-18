@@ -69,6 +69,11 @@
                 <td></td>
                 <td></td>
                 <td>
+                <a href="<?= ROOT ?>cart/checkout" class="btn btn-success" role="button">
+                    Revisar el formulario
+                </a>
+                </td>
+                <td>
                     <a href="<?= ROOT ?>cart/thanks" class="btn btn-success" role="button">Pagar</a>
                 </td>
             </tr>
